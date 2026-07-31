@@ -168,7 +168,8 @@ select:hover, select:focus {
 .sl-left {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
   height: 100%;
   overflow: hidden;
 }
@@ -194,20 +195,20 @@ select:hover, select:focus {
 .hw-lime   { color: var(--lime); }
 
 .sl-subtitle {
-  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  font-size: clamp(0.85rem, 1.15vw, 1rem);
   color: var(--text-secondary);
   line-height: 1.55;
-  max-width: 420px;
-  margin-bottom: 16px;
+  max-width: 440px;
+  margin-bottom: 0;
   font-weight: 400;
 }
 
-/* VIDEO wrapper — fits bottom of left column */
+/* VIDEO wrapper — sits right below subtitle */
 .sl-video-wrap {
   width: 100%;
   min-height: 0;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 /* ─────────────────────────────────
