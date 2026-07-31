@@ -155,7 +155,6 @@ export default function TakeawaysForm() {
               id="lt-wa"
               type="tel"
               className="sl-input"
-              placeholder="+91..."
               value={whatsapp}
               onChange={e => setWhatsapp(e.target.value)}
               required
