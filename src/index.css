@@ -234,7 +234,14 @@ select:hover, select:focus {
   justify-content: center;
 }
 
-.video-element { width: 100%; height: 100%; object-fit: cover; }
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.08);
+  transform-origin: center top;
+}
 
 /* Centre play button */
 .video-play-overlay-btn {
