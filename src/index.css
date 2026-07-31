@@ -87,15 +87,15 @@ select:hover, select:focus {
 
 .sl-page-container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1200px;
   height: 100%;
-  max-height: 840px;
+  max-height: 720px;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 2;
   margin: 0 auto;
-  padding: 32px 48px;
+  padding: 20px 40px;
 }
 
 /* Ambient glows */
@@ -122,7 +122,7 @@ select:hover, select:focus {
 ───────────────────────────────── */
 .sl-header {
   flex-shrink: 0;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   margin-left: -64px;
 }
 
@@ -134,14 +134,14 @@ select:hover, select:focus {
 }
 
 .sl-logo-img {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
   object-fit: contain;
 }
 
 .sl-logo-text {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.025em;
@@ -156,7 +156,7 @@ select:hover, select:focus {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 40px;
   align-items: stretch;   /* Equal height halves */
   position: relative;
   z-index: 2;
@@ -169,7 +169,7 @@ select:hover, select:focus {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 14px;
   height: 100%;
   overflow: hidden;
 }
@@ -181,11 +181,11 @@ select:hover, select:focus {
 
 /* Headline */
 .sl-headline {
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.03em;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 /* "Build" = purple, "Global." = white */
@@ -195,10 +195,10 @@ select:hover, select:focus {
 .hw-lime   { color: var(--lime); }
 
 .sl-subtitle {
-  font-size: clamp(0.85rem, 1.15vw, 1rem);
+  font-size: clamp(0.78rem, 1vw, 0.88rem);
   color: var(--text-secondary);
-  line-height: 1.55;
-  max-width: 440px;
+  line-height: 1.48;
+  max-width: 400px;
   margin-bottom: 0;
   font-weight: 400;
 }
@@ -337,18 +337,18 @@ select:hover, select:focus {
   background: var(--bg-card);
   border: 1px solid rgba(100, 81, 222, 0.30);
   border-radius: var(--radius-card);
-  padding: 24px 28px;
+  padding: 16px 22px;
   box-shadow: 0 16px 48px rgba(0,0,0,0.6), 0 0 24px rgba(100,81,222,0.15);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
   overflow: hidden;   /* hard no-scroll */
-  gap: 10px;
+  gap: 8px;
 }
 
 /* Card header */
 .card-title {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.02em;
@@ -357,19 +357,19 @@ select:hover, select:focus {
 }
 
 .card-subtitle {
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   color: var(--text-secondary);
-  line-height: 1.45;
+  line-height: 1.4;
   flex-shrink: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 
 .card-subtitle-tagline {
   color: var(--purple-light);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 500;
 }
 
@@ -392,15 +392,15 @@ select:hover, select:focus {
   flex-direction: column;
   flex: 1;
   min-height: 0;
-  gap: 10px;
+  gap: 8px;
   overflow: hidden;
 }
 
 /* Field group */
-.form-group { flex-shrink: 0; display: flex; flex-direction: column; gap: 5px; }
+.form-group { flex-shrink: 0; display: flex; flex-direction: column; gap: 4px; }
 
 .form-label {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: var(--text-secondary);
 }
@@ -413,9 +413,9 @@ select:hover, select:focus {
 
 .input-icon {
   position: absolute;
-  left: 12px;
+  left: 10px;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   pointer-events: none;
   display: flex;
   align-items: center;
@@ -426,9 +426,9 @@ select:hover, select:focus {
   background: var(--bg-input);
   border: 1px solid var(--border-default);
   border-radius: var(--radius);
-  padding: 9px 12px 9px 36px;
+  padding: 7px 10px 7px 32px;
   color: var(--text-primary);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   transition: border-color var(--transition);
 }
 .sl-input::placeholder { color: var(--text-muted); }
@@ -437,36 +437,36 @@ select:hover, select:focus {
 .waitlist-section { flex-shrink: 0; }
 
 .waitlist-label-row {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 .waitlist-label {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: var(--text-secondary);
   display: block;
 }
 .waitlist-sublabel {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
   display: block;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 /* OS Option Cards — matching Figma */
 .os-options {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 .os-option-card {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
   background: var(--bg-input);
   border: 1px solid var(--border-default);
   border-radius: var(--radius);
-  padding: 9px 12px;
+  padding: 7px 10px;
   cursor: pointer;
   text-align: left;
   width: 100%;
