@@ -83,19 +83,20 @@ select:hover, select:focus {
   align-items: center;
   overflow: hidden;
   position: relative;
+  padding: 28px 0;
 }
 
 .sl-page-container {
   width: 100%;
   max-width: 1200px;
   height: 100%;
-  max-height: 720px;
+  max-height: min(680px, calc(100vh - 56px));
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 2;
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 0 40px;
 }
 
 /* Ambient glows */
