@@ -123,6 +123,7 @@ select:hover, select:focus {
 .sl-header {
   flex-shrink: 0;
   margin-bottom: 24px;
+  margin-left: -16px;
 }
 
 .sl-logo-link {
