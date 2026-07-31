@@ -45,7 +45,7 @@ const FORM = {
 
 export default function TakeawaysForm() {
   const [email, setEmail]             = useState("");
-  const [whatsapp, setWhatsapp]       = useState("+918431745550");
+  const [whatsapp, setWhatsapp]       = useState("");
   // multi-select: track a Set of selected option IDs (unselected by default)
   const [selectedOS, setSelectedOS]   = useState(new Set());
   const [joinCommunity, setJoin]      = useState(false);
@@ -155,6 +155,7 @@ export default function TakeawaysForm() {
               id="lt-wa"
               type="tel"
               className="sl-input"
+              placeholder="+91..."
               value={whatsapp}
               onChange={e => setWhatsapp(e.target.value)}
               required
