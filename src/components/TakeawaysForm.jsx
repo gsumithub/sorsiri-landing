@@ -34,7 +34,7 @@ const FORM = {
       desc: "For founders, consultants, freelancers, creators, anyone whose name is the brand.",
     },
   ],
-  communityLabel: "Founder Community:",
+  communityLabel: "Community:",
   communityItems: [
     "Join an exclusive list of founders in the Sorsiri WhatsApp Community",
     "Send me future event updates",
