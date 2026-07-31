@@ -13,7 +13,7 @@ import {
 /* ── Figma-spec form content ── */
 const FORM = {
   title: "Session Takeaways",
-  subtitle: "Get the one-pager from today's talk, sent straight to your inbox.",
+  subtitle: "Download the one-pager from today's talk.",
   subtitleLine2: "You don't need louder marketing.",
   subtitleBold: "You need clearer marketing.",
   waitlistLabel: "Put me on the Sorsiri waitlist:",
