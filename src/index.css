@@ -631,6 +631,11 @@ select:hover, select:focus {
     gap: 32px;
   }
 
+  .sl-header {
+    margin-left: 0;
+    margin-bottom: 16px;
+  }
+
   .sl-left {
     height: auto;
   }
@@ -668,11 +673,12 @@ select:hover, select:focus {
 /* ── MOBILE DEVICES (< 600px width) ── */
 @media (max-width: 600px) {
   .sl-page-container {
-    padding: 16px;
+    padding: 20px 16px;
   }
 
-  .sl-logo-wrapper {
-    margin-bottom: 18px;
+  .sl-header {
+    margin-left: 0;
+    margin-bottom: 16px;
   }
 
   .sl-logo-img {
@@ -681,7 +687,7 @@ select:hover, select:focus {
   }
 
   .sl-logo-text {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
   .sl-headline {
