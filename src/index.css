@@ -625,3 +625,176 @@ select:hover, select:focus {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES (All Device Sizes)
+   ============================================================ */
+
+/* ── TABLETS & SMALL DESKTOPS (< 960px width) ── */
+@media (max-width: 960px) {
+  html, body, #root {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto !important;
+  }
+
+  .sl-root {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto !important;
+  }
+
+  .sl-header {
+    padding: 16px 28px 0 28px;
+    height: auto;
+  }
+
+  .sl-main {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+    gap: 32px;
+  }
+
+  .sl-left {
+    padding: 24px 28px 0 28px;
+    align-items: flex-start;
+  }
+
+  .sl-headline {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+  }
+
+  .sl-subtitle {
+    max-width: 100%;
+  }
+
+  .sl-video-wrap {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .sl-right {
+    padding: 0 28px 48px 28px;
+  }
+
+  .takeaways-card {
+    max-height: none;
+    height: auto;
+    max-width: 640px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .takeaways-form {
+    overflow: visible;
+  }
+}
+
+/* ── MOBILE DEVICES (< 600px width) ── */
+@media (max-width: 600px) {
+  .sl-header {
+    padding: 14px 18px 0 18px;
+  }
+
+  .sl-logo-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .sl-logo-text {
+    font-size: 1.1rem;
+  }
+
+  .sl-left {
+    padding: 16px 18px 0 18px;
+  }
+
+  .sl-headline {
+    font-size: clamp(1.75rem, 8.5vw, 2.3rem);
+    margin-bottom: 12px;
+  }
+
+  .sl-subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .sl-right {
+    padding: 0 18px 36px 18px;
+  }
+
+  .takeaways-card {
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .os-option-card {
+    padding: 9px 10px;
+    gap: 8px;
+  }
+
+  .os-opt-title {
+    font-size: 0.82rem;
+  }
+
+  .os-opt-desc {
+    font-size: 0.7rem;
+  }
+
+  .sl-input {
+    font-size: 0.82rem;
+    padding: 10px 12px 10px 36px;
+  }
+
+  .cb-text {
+    font-size: 0.74rem;
+  }
+
+  .sl-btn-submit {
+    padding: 13px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ── SHORT DESKTOP VIEWPORTS (width >= 961px but height < 720px) ── */
+@media (min-width: 961px) and (max-height: 720px) {
+  html, body, #root {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto !important;
+  }
+
+  .sl-root {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto !important;
+  }
+
+  .sl-main {
+    height: auto;
+    overflow: visible;
+  }
+
+  .takeaways-card {
+    max-height: none;
+    height: auto;
+    overflow: visible;
+  }
+
+  .takeaways-form {
+    overflow: visible;
+  }
+}
+
