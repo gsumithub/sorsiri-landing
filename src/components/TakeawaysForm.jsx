@@ -13,7 +13,8 @@ import {
 /* ── Figma-spec form content ── */
 const FORM = {
   title: "Session Takeaways",
-  subtitle: "Get the one-pager from today's talk, sent straight to your inbox. You don't need louder marketing.",
+  subtitle: "Get the one-pager from today's talk, sent straight to your inbox.",
+  subtitleLine2: "You don't need louder marketing.",
   subtitleBold: "You need clearer marketing.",
   waitlistLabel: "Put me on the Sorsiri waitlist:",
   waitlistSubLabel: "Pick either, or both. We're onboarding in small batches.",
@@ -116,7 +117,9 @@ export default function TakeawaysForm() {
       {/* ── Header ── */}
       <h2 className="card-title">{FORM.title}</h2>
       <p className="card-subtitle">
-        {FORM.subtitle} <strong>{FORM.subtitleBold}</strong>
+        {FORM.subtitle}
+        <br />
+        {FORM.subtitleLine2} <strong>{FORM.subtitleBold}</strong>
       </p>
       <div className="form-divider" />
 
