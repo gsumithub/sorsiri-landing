@@ -145,7 +145,7 @@ export default function TakeawaysForm() {
         <div className="form-group">
           <label className="form-label" htmlFor="lt-wa">WhatsApp Number</label>
           <div className="input-row">
-            <span className="input-icon" style={{ color: "#25D366" }}>
+            <span className="input-icon">
               <BsWhatsapp />
             </span>
             <input
