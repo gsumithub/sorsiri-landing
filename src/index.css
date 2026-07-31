@@ -348,6 +348,7 @@ select:hover, select:focus {
   color: var(--text-primary);
   letter-spacing: -0.02em;
   flex-shrink: 0;
+  text-align: center;
 }
 
 .card-subtitle {
@@ -355,6 +356,7 @@ select:hover, select:focus {
   color: var(--text-secondary);
   line-height: 1.45;
   flex-shrink: 0;
+  text-align: center;
 }
 
 .card-subtitle strong { color: var(--text-primary); }
