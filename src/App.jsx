@@ -12,20 +12,20 @@ export default function App() {
       <div className="bg-glow bg-glow-lime"   aria-hidden="true" />
 
       <div className="sl-page-container">
-        {/* ── MAIN SPLIT LAYOUT (equal height halves) ── */}
+        {/* LOGO HEADER (above both halves) */}
+        <header className="sl-header">
+          <a href="#" className="sl-logo-link">
+            <img src={LOGO} alt="Sorsiri logo" className="sl-logo-img" />
+            <span className="sl-logo-text">Sorsiri</span>
+          </a>
+        </header>
+
+        {/* MAIN SPLIT LAYOUT (two equal-height halves below logo) */}
         <main className="sl-main">
 
-          {/* LEFT HALF: Logo + Headline + Subtitle + Video */}
+          {/* LEFT HALF: Headline + Subtitle + Video */}
           <section className="sl-left" aria-label="Sorsiri pitch">
             <div className="sl-left-top">
-              {/* Logo aligned with left content */}
-              <div className="sl-logo-wrapper">
-                <a href="#" className="sl-logo-link">
-                  <img src={LOGO} alt="Sorsiri logo" className="sl-logo-img" />
-                  <span className="sl-logo-text">Sorsiri</span>
-                </a>
-              </div>
-
               <h1 className="sl-headline">
                 {/* Figma: "Build" = purple, "Global." = white */}
                 <span className="hw-purple">Build </span>
@@ -42,7 +42,7 @@ export default function App() {
               </p>
             </div>
 
-            {/* VIDEO PLAYER — aligned at the bottom of the left column */}
+            {/* VIDEO PLAYER — bottom of left half */}
             <div className="sl-video-wrap">
               <VideoPlayer />
             </div>

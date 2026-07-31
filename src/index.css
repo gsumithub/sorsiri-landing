@@ -73,7 +73,7 @@ select:hover, select:focus {
 }
 
 /* ─────────────────────────────────
-   ROOT CONTAINER — Centered Viewport Frame
+   MAIN CONTAINER — Centered Frame
 ───────────────────────────────── */
 .sl-root {
   width: 100vw;
@@ -92,7 +92,6 @@ select:hover, select:focus {
   max-height: 840px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: relative;
   z-index: 2;
   margin: 0 auto;
@@ -119,38 +118,10 @@ select:hover, select:focus {
 }
 
 /* ─────────────────────────────────
-   MAIN SPLIT — Equal height columns
+   HEADER LOGO — Above both halves
 ───────────────────────────────── */
-.sl-main {
-  flex: 1;
-  min-height: 0;          /* critical for flex children */
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: stretch;   /* Equal height halves */
-  position: relative;
-  z-index: 2;
-}
-
-/* ─────────────────────────────────
-   LEFT HALF — Logo + Text + Video
-───────────────────────────────── */
-.sl-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  overflow: hidden;
-}
-
-.sl-left-top {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Logo — aligned with left text */
-.sl-logo-wrapper {
+.sl-header {
+  flex-shrink: 0;
   margin-bottom: 24px;
 }
 
@@ -173,6 +144,37 @@ select:hover, select:focus {
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.025em;
+}
+
+/* ─────────────────────────────────
+   MAIN SPLIT — Equal height columns below logo
+───────────────────────────────── */
+.sl-main {
+  flex: 1;
+  min-height: 0;          /* critical for flex children */
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;   /* Equal height halves */
+  position: relative;
+  z-index: 2;
+}
+
+/* ─────────────────────────────────
+   LEFT HALF — Headline + Subtitle + Video
+───────────────────────────────── */
+.sl-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sl-left-top {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Headline */
