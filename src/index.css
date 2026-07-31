@@ -357,9 +357,21 @@ select:hover, select:focus {
   line-height: 1.45;
   flex-shrink: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
-.card-subtitle strong { color: var(--text-primary); }
+.card-subtitle-tagline {
+  color: var(--purple-light);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.card-subtitle-tagline strong {
+  color: var(--lime);
+  font-weight: 800;
+}
 
 /* Thin divider */
 .form-divider {

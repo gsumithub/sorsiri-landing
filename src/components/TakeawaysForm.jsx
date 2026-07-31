@@ -117,9 +117,10 @@ export default function TakeawaysForm() {
       {/* ── Header ── */}
       <h2 className="card-title">{FORM.title}</h2>
       <p className="card-subtitle">
-        {FORM.subtitle}
-        <br />
-        {FORM.subtitleLine2} <strong>{FORM.subtitleBold}</strong>
+        <span>{FORM.subtitle}</span>
+        <span className="card-subtitle-tagline">
+          {FORM.subtitleLine2} <strong>{FORM.subtitleBold}</strong>
+        </span>
       </p>
       <div className="form-divider" />
 
