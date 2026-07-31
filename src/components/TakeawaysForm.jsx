@@ -22,14 +22,14 @@ const FORM = {
       id: "global-os",
       title: "Global OS",
       tagline: "Building brands beyond borders",
-      taglineColor: "os-opt-tagline-purple",
+      taglineColor: "os-opt-tagline-lime",
       desc: "For founders expanding into new markets.",
     },
     {
       id: "presence-os",
       title: "Presence OS",
       tagline: "Personal branding, systemized",
-      taglineColor: "os-opt-tagline-lime",
+      taglineColor: "os-opt-tagline-purple",
       desc: "For founders, consultants, freelancers, creators, anyone whose name is the brand.",
     },
   ],
@@ -45,9 +45,9 @@ const FORM = {
 export default function TakeawaysForm() {
   const [email, setEmail]             = useState("");
   const [whatsapp, setWhatsapp]       = useState("+918431745550");
-  // multi-select: track a Set of selected option IDs
-  const [selectedOS, setSelectedOS]   = useState(new Set(["global-os"]));
-  const [joinCommunity, setJoin]      = useState(true);
+  // multi-select: track a Set of selected option IDs (unselected by default)
+  const [selectedOS, setSelectedOS]   = useState(new Set());
+  const [joinCommunity, setJoin]      = useState(false);
   const [getUpdates, setUpdates]      = useState(false);
 
   const [loading, setLoading]   = useState(false);
