@@ -88,7 +88,7 @@ select:hover, select:focus {
 
 .sl-page-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   height: 100%;
   max-height: min(680px, calc(100vh - 56px));
   display: flex;
@@ -96,7 +96,7 @@ select:hover, select:focus {
   position: relative;
   z-index: 2;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 32px;
 }
 
 /* Ambient glows */
@@ -124,7 +124,7 @@ select:hover, select:focus {
 .sl-header {
   flex-shrink: 0;
   margin-bottom: 14px;
-  margin-left: -64px;
+  margin-left: -44px;
 }
 
 .sl-logo-link {
@@ -157,7 +157,7 @@ select:hover, select:focus {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 32px;
   align-items: stretch;   /* Equal height halves */
   position: relative;
   z-index: 2;
