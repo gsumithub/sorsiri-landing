@@ -37,8 +37,9 @@ export default function App() {
               </h1>
 
               <p className="sl-subtitle">
-                Sorsiri captures your founder's context into a structured Brand OS,
-                then generates a culture-aware copy kit for every market.
+                Sorsiri captures your founder's context into a<br />
+                structured Brand OS, then generates a culture-<br />
+                aware copy kit for every market.
               </p>
             </div>
 

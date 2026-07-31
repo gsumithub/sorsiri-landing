@@ -182,11 +182,12 @@ select:hover, select:focus {
 
 /* Headline */
 .sl-headline {
-  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-size: clamp(2.5rem, 4.2vw, 3.6rem);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.03em;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 /* "Build" = purple, "Global." = white */
@@ -196,12 +197,13 @@ select:hover, select:focus {
 .hw-lime   { color: var(--lime); }
 
 .sl-subtitle {
-  font-size: clamp(0.78rem, 1vw, 0.88rem);
+  font-size: clamp(0.82rem, 1.05vw, 0.92rem);
   color: var(--text-secondary);
-  line-height: 1.48;
-  max-width: 400px;
-  margin-bottom: 0;
+  line-height: 1.5;
+  max-width: 420px;
+  margin-bottom: 20px;
   font-weight: 400;
+  text-align: left;
 }
 
 /* VIDEO wrapper — sits right below subtitle */
