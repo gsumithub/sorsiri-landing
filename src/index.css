@@ -99,6 +99,32 @@ select:hover, select:focus {
   padding: 0 32px;
 }
 
+/* Full-screen Background Video (20% opacity with black overlay) */
+.bg-video-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  background: #000000;
+}
+
+.bg-video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.20;
+}
+
+.bg-black-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
 /* Ambient glows */
 .bg-glow {
   position: absolute;

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { submitTakeawaysForm } from "../services/api";
 import {
   BsEnvelope,
   BsWhatsapp,
@@ -9,6 +8,9 @@ import {
   BsLock,
   BsArrowRepeat,
 } from "react-icons/bs";
+
+const BREVO_ENDPOINT =
+  "https://89b8da08.sibforms.com/serve/MUIFAIyNndpD27capw_Df5mW8Cw1_qqfRjGMUxGSye6EArBf2mp9ACLb6YuPFy5Phv4ch33c2r-oSCFTARt4JbJdzra984Z9h14-tKdTq6mR6CBIs9NwTaNnBO1efsUN3ZOvVxD5xM4VpKFcIFVoSwyTKN4zcOaUWVU1gbUWr-fTIcEWlulwhejQg2YqEGkjTC-5ceZomTgMqw7NiA==";
 
 /* ── Figma-spec form content ── */
 const FORM = {
@@ -44,16 +46,15 @@ const FORM = {
 };
 
 export default function TakeawaysForm() {
-  const [email, setEmail]             = useState("");
-  const [whatsapp, setWhatsapp]       = useState("");
-  // multi-select: track a Set of selected option IDs (unselected by default)
-  const [selectedOS, setSelectedOS]   = useState(new Set());
-  const [joinCommunity, setJoin]      = useState(false);
-  const [getUpdates, setUpdates]      = useState(false);
+  const [email, setEmail]           = useState("");
+  const [whatsapp, setWhatsapp]     = useState("");
+  const [selectedOS, setSelectedOS] = useState(new Set());
+  const [joinCommunity, setJoin]    = useState(false);
+  const [getUpdates, setUpdates]    = useState(false);
 
-  const [loading, setLoading]   = useState(false);
-  const [error, setError]       = useState("");
-  const [success, setSuccess]   = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError]     = useState("");
+  const [success, setSuccess] = useState(null);
 
   const toggleOS = (id) => {
     setSelectedOS((prev) => {
@@ -67,18 +68,25 @@ export default function TakeawaysForm() {
     e.preventDefault();
     setError("");
     setLoading(true);
+
     try {
-      // TODO: Backend Integration Point — src/services/api.js:submitTakeawaysForm
-      const res = await submitTakeawaysForm({
-        email,
-        whatsappNumber: whatsapp,
-        selectedProducts: [...selectedOS],
-        joinWhatsappCommunity: joinCommunity,
-        sendEventUpdates: getUpdates,
+      const formData = new FormData();
+      formData.append("EMAIL", email);
+      formData.append("SMS", whatsapp);
+      formData.append("SMS__COUNTRY_CODE", "+91");
+      formData.append("email_address_check", "");
+      formData.append("locale", "en");
+
+      // Submit form data to Brevo serve endpoint
+      await fetch(BREVO_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
       });
-      if (res.success) setSuccess(res.data);
+
+      setSuccess({ email, whatsappNumber: whatsapp });
     } catch (err) {
-      setError(err.message || "Something went wrong. Please try again.");
+      setError("Your subscription could not be saved. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -124,17 +132,29 @@ export default function TakeawaysForm() {
       </p>
       <div className="form-divider" />
 
-      {/* ── Form ── */}
-      <form className="takeaways-form" onSubmit={handleSubmit}>
+      {/* ── Brevo-Integrated Form ── */}
+      <form
+        id="sib-form"
+        className="takeaways-form"
+        method="POST"
+        action={BREVO_ENDPOINT}
+        onSubmit={handleSubmit}
+        data-type="subscription"
+      >
+        <input type="hidden" name="SMS__COUNTRY_CODE" value="+91" />
+        <input type="hidden" name="email_address_check" value="" className="input--hidden" />
+        <input type="hidden" name="locale" value="en" />
+
         {error && <div className="form-error">{error}</div>}
 
         {/* Email */}
         <div className="form-group">
-          <label className="form-label" htmlFor="lt-email">Email</label>
+          <label className="form-label" htmlFor="EMAIL">Email</label>
           <div className="input-row">
             <span className="input-icon"><BsEnvelope /></span>
             <input
-              id="lt-email"
+              id="EMAIL"
+              name="EMAIL"
               type="email"
               className="sl-input"
               placeholder="Use event registration email"
@@ -147,13 +167,14 @@ export default function TakeawaysForm() {
 
         {/* WhatsApp */}
         <div className="form-group">
-          <label className="form-label" htmlFor="lt-wa">WhatsApp Number</label>
+          <label className="form-label" htmlFor="SMS">WhatsApp Number</label>
           <div className="input-row">
             <span className="input-icon">
               <BsWhatsapp />
             </span>
             <input
-              id="lt-wa"
+              id="SMS"
+              name="SMS"
               type="tel"
               className="sl-input"
               placeholder="+918431745550"

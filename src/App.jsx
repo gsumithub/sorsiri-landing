@@ -7,6 +7,21 @@ const LOGO = "/logo.png";
 export default function App() {
   return (
     <div className="sl-root">
+      {/* Background Video (20% opacity with black overlay) */}
+      <div className="bg-video-wrap" aria-hidden="true">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="bg-video-element"
+        >
+          <source src="/vedio.mp4" type="video/mp4" />
+          <img src="/vedioGIF.gif" alt="" className="bg-video-element" />
+        </video>
+        <div className="bg-black-overlay" />
+      </div>
+
       {/* Ambient background glows */}
       <div className="bg-glow bg-glow-purple" aria-hidden="true" />
       <div className="bg-glow bg-glow-lime"   aria-hidden="true" />
@@ -20,10 +35,10 @@ export default function App() {
           </a>
         </header>
 
-        {/* MAIN SPLIT LAYOUT (two equal-height halves below logo) */}
+        {/* MAIN SPLIT LAYOUT */}
         <main className="sl-main">
 
-          {/* LEFT HALF: Headline + Subtitle + Video */}
+          {/* LEFT HALF: Headline + Subtitle */}
           <section className="sl-left" aria-label="Sorsiri pitch">
             <div className="sl-left-top">
               <h1 className="sl-headline">
@@ -42,14 +57,9 @@ export default function App() {
                 aware copy kit for every market.
               </p>
             </div>
-
-            {/* VIDEO PLAYER — bottom of left half */}
-            <div className="sl-video-wrap">
-              <VideoPlayer />
-            </div>
           </section>
 
-          {/* RIGHT HALF: Session Takeaways Form Card (equal height to left half) */}
+          {/* RIGHT HALF: Session Takeaways Form Card */}
           <section className="sl-right" aria-label="Session Takeaways">
             <TakeawaysForm />
           </section>
